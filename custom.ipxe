@@ -3,16 +3,13 @@
 ### netboot.xyz-custom menu
 ###
 
-:start
-echo Hello world!
-
-:debian-10-cinnamon-squash
-set ftp_url ftp://frontier-nas/docker/netbootxyz
+:kerio-control
+set ftp_url ftp://frontier-nas/docker/netbootxyz/assets/Kerio-Control/boot/
 goto boot
 
 :boot
-kernel ${ftp_url}/assets/Kerio-Control/boot/vmlinuz quiet initrd=initrd
-initrd ${ftp_url}/assets/Kerio-Control/boot/initrd
+kernel ${ftp_url}/vmlinuz quiet initrd=initrd
+initrd ${ftp_url}/initrd
 boot
 
 goto custom_exit
