@@ -5,6 +5,8 @@
 
 :kerio-control
 set ftp_url http://172.20.159.55:8100
+set iso_url http://172.20.159.55:8101
+
 
 :custom
 clear custom_choice
@@ -23,12 +25,12 @@ goto custom_exit
 :option_one
 kernel ${ftp_url}/boot/vmlinuz
 initrd ${ftp_url}/boot/initrd
-imgargs vmlinuz quiet initrd=/boot/initrd
+imgargs vmlinuz quiet initrd=initrd
 boot || goto custom_exit
 
 :option_two
 kernel https://boot.netboot.xyz/memdisk raw iso
-initrd http://path.to/iso
+initrd ${iso_url}/kerio-control-installer-9.3.4-3795.iso
 boot || goto custom_exit
 
 :option_three
