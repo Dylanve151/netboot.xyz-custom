@@ -3,18 +3,14 @@
 ### netboot.xyz-custom menu
 ###
 
-:start
-echo Hello world!
-sleep 10
-
 :kerio-control
 set ftp_url ftp://frontier-nas/docker/netbootxyz/assets/Kerio-Control/boot/
 goto boot
 
 :boot
-imgfree
-kernel ${ftp_url}vmlinuz
-initrd ${ftp_url}initrd
+kernel ${ftp_url}/config/menus/memdisk
+initrd ${ftp_url}/asset/kerio-control-installer-9.3.4-3795.iso
+imgargs memdisk iso raw
 boot
 
 goto custom_exit
