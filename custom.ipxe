@@ -11,8 +11,8 @@ set ftp_url ftp://frontier-nas/docker/netbootxyz
 goto boot
 
 :boot
-kernel ${ftp_url}/assets/Kerio-Control/boot/vmlinuz quiet initrd=${ftp_url}/assets/Kerio-Control/boot/initrd
-#initrd ${ftp_url}/assets/Kerio-Control/boot/initrd
+kernel ${ftp_url}/assets/Kerio-Control/boot/vmlinuz quiet initrd=initrd
+initrd ${ftp_url}/assets/Kerio-Control/boot/initrd
 boot
 
 goto custom_exit
