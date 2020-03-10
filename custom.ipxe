@@ -6,6 +6,19 @@
 :start
 echo Hello world!
 sleep 10
+
+:debian-10-cinnamon-squash
+set ftp_url ftp://frontier-nas/docker/netbootxyz/assets/Kerio-Control/boot/
+set squash_url ${live_endpoint}/debian-squash/releases/download/10.3.0-aa8809e8/filesystem.squashfs
+set kernel_url ${live_endpoint}/debian-core-10/releases/download/10.3.0-a6a0d71a/
+goto boot
+
+:boot
+imgfree
+kernel ${kernel_url}vmlinuz
+initrd ${kernel_url}initrd
+boot
+
 goto custom_exit
 
 :custom_exit
