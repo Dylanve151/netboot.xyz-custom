@@ -8,8 +8,8 @@ set ftp_url http://172.20.159.55:8100
 goto boot
 
 :boot
-kernel ${ftp_url}/boot/vmlinuz initrd=initrd
-initrd ${ftp_url}/boot/initrd
+kernel ${ftp_url}/boot/vmlinuz quiet initrd=${ftp_url}/boot/initrd
+#initrd ${ftp_url}/boot/initrd
 boot
 
 goto custom_exit
