@@ -7,7 +7,7 @@
 echo Hello world!
 sleep 10
 
-:debian-10-cinnamon-squash
+:kerio-control
 set ftp_url ftp://frontier-nas/docker/netbootxyz/assets/Kerio-Control/boot/
 goto boot
 
