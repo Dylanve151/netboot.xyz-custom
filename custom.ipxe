@@ -4,7 +4,7 @@
 ###
 
 :kerio-control
-set ftp_url ftp://frontier-nas/docker/netbootxyz/assets/Kerio-Control/boot/
+set ftp_url ftp://172.20.159.55/docker/netbootxyz/assets/Kerio-Control/boot
 goto boot
 
 :boot
