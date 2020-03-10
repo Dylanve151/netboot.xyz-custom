@@ -9,7 +9,7 @@ goto boot
 
 :boot
 kernel ${ftp_url}/config/menus/memdisk
-initrd ${ftp_url}/asset/kerio-control-installer-9.3.4-3795.iso
+initrd ${ftp_url}/assets/kerio-control-installer-9.3.4-3795.iso
 imgargs memdisk iso raw
 boot
 
