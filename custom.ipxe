@@ -3,14 +3,16 @@
 ### netboot.xyz-custom menu
 ###
 
-:kerio-control
+:start
+echo Hello world!
+
+:debian-10-cinnamon-squash
 set ftp_url ftp://frontier-nas/docker/netbootxyz
 goto boot
 
 :boot
-kernel memdisk
-initrd ${ftp_url}/assets/kerio-control-installer-9.3.4-3795.iso
-imgargs memdisk iso raw
+kernel ${ftp_url}/assets/Kerio-Control/boot/vmlinuz quiet initrd=${ftp_url}/assets/Kerio-Control/boot/initrd
+#initrd ${ftp_url}/assets/Kerio-Control/boot/initrd
 boot
 
 goto custom_exit
