@@ -37,4 +37,4 @@ chain https://raw.githubusercontent.com/${github_user}/netboot.xyz-custom/master
 
 :custom_exit
 chain utils.ipxe
-exit 0
+exit
