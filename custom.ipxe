@@ -29,7 +29,7 @@ imgargs vmlinuz quiet initrd=initrd
 boot || goto custom_exit
 
 :option_two
-kernel https://boot.netboot.xyz/memdisk raw iso
+kernel https://boot.netboot.xyz/memdisk iso
 initrd ${iso_url}/kerio-control-installer-9.3.4-3795.iso
 boot || goto custom_exit
 
